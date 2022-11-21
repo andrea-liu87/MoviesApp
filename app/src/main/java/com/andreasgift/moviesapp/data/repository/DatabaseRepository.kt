@@ -13,7 +13,7 @@ class DatabaseRepository@Inject constructor(
 )  {
     fun getMoviesList(): Flow<List<Movie>> = dao.getAllMovies()
 
-    fun getMovieDetailById(id: Int): Movie = dao.getMoviesById(id)
+    fun getMovieDetailById(id: Int): Flow<Movie> = dao.getMoviesById(id)
 
     suspend fun syncMovieFromServer(movies: List<Movie>) = dao.deleteAndCreate(movies)
 }

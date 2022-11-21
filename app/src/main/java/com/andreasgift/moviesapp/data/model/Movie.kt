@@ -1,6 +1,9 @@
 package com.andreasgift.moviesapp.data.model
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverter
+import com.andreasgift.moviesapp.data.db.MovieTypeConverter
 import com.google.gson.annotations.SerializedName
 
 data class Results (
@@ -20,7 +23,7 @@ data class Movie (
     @SerializedName("budget"                ) var budget              : Int?                           = null,
     @SerializedName("genres"                ) var genres              : ArrayList<Genres>              = arrayListOf(),
     @SerializedName("homepage"              ) var homepage            : String?                        = null,
-    @SerializedName("id"                    ) var id                  : Int?                           = null,
+    @PrimaryKey @SerializedName("id"                    ) var id                  : Int?                           = null,
     @SerializedName("imdb_id"               ) var imdbId              : String?                        = null,
     @SerializedName("original_language"     ) var originalLanguage    : String?                        = null,
     @SerializedName("original_title"        ) var originalTitle       : String?                        = null,

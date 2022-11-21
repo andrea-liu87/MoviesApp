@@ -1,17 +1,14 @@
-package com.andreasgift.moviesapp
+package com.andreasgift.moviesapp.ui.home
 
 import android.util.Log
 import androidx.lifecycle.*
 import androidx.work.*
+import com.andreasgift.moviesapp.MovieApplication
 import com.andreasgift.moviesapp.data.api.ListMovieDownloadWorker
 import com.andreasgift.moviesapp.data.model.Movie
 import com.andreasgift.moviesapp.data.repository.DatabaseRepository
-import com.andreasgift.moviesapp.data.repository.RemoteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
 @HiltViewModel

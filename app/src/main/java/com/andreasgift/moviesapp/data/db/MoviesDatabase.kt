@@ -1,12 +1,11 @@
 package com.andreasgift.moviesapp.data.db
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import com.andreasgift.moviesapp.data.model.Movie
 
 @Database(entities = [Movie::class], version = 1, exportSchema = true)
+@TypeConverters(MovieTypeConverter::class)
 abstract class MoviesDB : RoomDatabase() {
 
     abstract fun dao(): MoviesDAO

@@ -16,7 +16,7 @@ interface MoviesDAO {
     fun getAllMovies(): Flow<List<Movie>>
 
     @Query("SELECT * FROM movies WHERE id IN (:id)")
-    fun getMoviesById(id:Int): Movie
+    fun getMoviesById(id:Int): Flow<Movie>
 
     @Delete
     fun deleteMovie(form: Movie)
