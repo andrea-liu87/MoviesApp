@@ -1,5 +1,5 @@
 # Movies App
-<img src="https://github.com/andrea-liu87/MoviesApp/blob/master/screenshoots/home.png" width="243" height="432"> <img src="https://github.com/andrea-liu87/MoviesApp/blob/master/screenshoots/detail.png" width="243" height="432">
+<img src="https://github.com/andrea-liu87/MoviesApp/blob/master/screenshoots/home.png" width="243" height="516"> <img src="https://github.com/andrea-liu87/MoviesApp/blob/master/screenshoots/detail.png" width="243" height="516">
 
 
 ## Built With 🛠
