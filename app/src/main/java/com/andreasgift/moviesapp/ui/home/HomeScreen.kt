@@ -24,8 +24,9 @@ fun HomeScreen(
     if (uiState is MainActivityUiState.Success) {
         val list = uiState.movies
         LazyColumn(
-            modifier = Modifier.padding(8.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
+            modifier = Modifier.padding(8.dp)
+                .background(MaterialTheme.colors.secondary.copy(alpha = 0.6f)),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(items = list) { movie ->
                 Card(
@@ -33,23 +34,25 @@ fun HomeScreen(
                         .fillMaxWidth()
                         .background(MaterialTheme.colors.secondary)
                         .clickable { navigateToDetail(movie.id ?: 0) },
-                    shape = RoundedCornerShape(8.dp),
-                    elevation = 5.dp,
+                    shape = RoundedCornerShape(12.dp),
+                    elevation = 6.dp,
                     backgroundColor = MaterialTheme.colors.secondary
                 ) {
                     Row(
-                        modifier = Modifier.padding(8.dp),
+                        modifier = Modifier.padding(12.dp),
                         horizontalArrangement = Arrangement.spacedBy(6.dp)
                     ) {
                         AsyncImage(
+                            modifier = Modifier.weight(2f),
                             model = "https://image.tmdb.org/t/p/w500" + movie.posterPath,
                             contentDescription = "poster"
                         )
-                        Column() {
-                            Text(movie.title ?: "", style = MaterialTheme.typography.subtitle1)
+                        Column(modifier = Modifier.weight(3f),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Text(movie.title ?: "", style = MaterialTheme.typography.h6)
                             Text(
-                                text = movie.releaseDate ?: "",
-                                style = MaterialTheme.typography.body2
+                                text = movie.releaseDate?.substring(0,4) ?: "",
+                                style = MaterialTheme.typography.subtitle1
                             )
                         }
                     }

@@ -22,18 +22,22 @@ fun DetailScreen(movieId:Int, viewModel: DetailViewModel) {
     LaunchedEffect(key1 = movieId) {
         viewModel.fetchMovieDetailsById(movieId)
     }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colors.secondary.copy(0.6f))
+    ) {
         Card(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(4.dp)
+                .fillMaxSize()
+                .padding(12.dp)
                 .background(MaterialTheme.colors.secondary),
-            shape = RoundedCornerShape(8.dp),
-            elevation = 5.dp,
+            shape = RoundedCornerShape(12.dp),
+            elevation = 6.dp,
             backgroundColor = MaterialTheme.colors.secondary
         ) {
             Column(
-                modifier = Modifier.padding(8.dp)
-                    .fillMaxSize(),
+                modifier = Modifier.padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 AsyncImage(
@@ -41,13 +45,14 @@ fun DetailScreen(movieId:Int, viewModel: DetailViewModel) {
                     contentDescription = "poster"
                 )
 
-                Text(movie?.title ?: "", style = MaterialTheme.typography.subtitle1)
+                Text(movie?.title ?: "", style = MaterialTheme.typography.h6)
 
                 Text(
                     text = movie?.releaseDate ?: "",
-                    style = MaterialTheme.typography.body2
+                    style = MaterialTheme.typography.subtitle1
                 )
-                Text(text = movie?.overview ?: "", style = MaterialTheme.typography.body1)
+                Text(text = movie?.overview ?: "", style = MaterialTheme.typography.body2)
             }
         }
+    }
 }

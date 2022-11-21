@@ -8,7 +8,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 val Typography = Typography(
-    //defaultFontFamily = MontserratFontFamily,
+    defaultFontFamily = FontFamily.SansSerif,
     h1 = TextStyle(
         fontWeight = FontWeight.W300,
         fontSize = 96.sp,
@@ -39,29 +39,24 @@ val Typography = Typography(
         fontWeight = FontWeight.W500,
         fontSize = 18.sp,
         letterSpacing = 0.15.sp,
-        fontFamily = FontFamily.Monospace
     ),
     subtitle1 = TextStyle(
         fontWeight = FontWeight.W500,
         fontSize = 16.sp,
-        fontFamily = FontFamily.Monospace,
         letterSpacing = 0.15.sp
     ),
     body1 = TextStyle(
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,
-        fontFamily = FontFamily.Monospace,
         letterSpacing = 0.15.sp,
     ),
     body2 = TextStyle(
         fontWeight = FontWeight.W400,
-        fontSize = 14.sp,
-        fontFamily = FontFamily.Monospace),
+        fontSize = 14.sp),
     button = TextStyle(
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
-        letterSpacing = 0.15.sp,
-        fontFamily = FontFamily.Monospace
+        letterSpacing = 0.15.sp
     ),
     caption = TextStyle(
         fontWeight = FontWeight.W500,

@@ -24,7 +24,7 @@ fun MoviesApp(
     detailViewModel: DetailViewModel
 ) {
     Scaffold(
-        backgroundColor = MaterialTheme.colors.secondary,
+        backgroundColor = MaterialTheme.colors.secondary.copy(alpha = 0.6f),
         topBar = {},
     ) { padding ->
         NavHost(

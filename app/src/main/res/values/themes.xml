@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/primary_dark</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/play_store_512</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/movie</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
         <item name="postSplashScreenTheme">@style/Theme.MoviesApp</item>
     </style>
